@@ -30,7 +30,7 @@ const loadFavorites = async () => {
     }
 }
 
-// Add try and catch for error
+// Adds a new favorite
 const addFavorite = async (pokemon) => {
     const api = ('http://localhost:3000/api/favorites')
     try {
@@ -188,10 +188,12 @@ const generateFavorite = (favorite) => {
         
     })
     
+    // Comment input and submission setup
     commentInput.setAttribute('id', 'comment-input')
     button.setAttribute('id', 'comment-submit')
     button.setAttribute('type', 'submit')
     
+    // Adding comment form to container
     commentForm.appendChild(commentInput)
     commentForm.appendChild(button)
     container.appendChild(commentForm)
