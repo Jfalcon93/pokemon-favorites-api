@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Favorite Pokemon</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <form class="search-form" id="search-form">
        <p>Search Pokemon</p>
-        <input id="searchText" type="text" placeholder="Ex. Lapras">
-        <input type="submit" id="submit">
+        <input id="searchText" class="searchText" type="text" placeholder="Ex. Lapras">
+        <input type="submit" id="submit" class="submit">
     </form>
-    <div id="search-results"></div>
-    <div id="favorites"></div>
+    <div id="search-results" class="search-results"></div>
+    <div id="favorites" class="favorites-container"></div>
     <script src="app.js"></script>
 </body>
 </html>

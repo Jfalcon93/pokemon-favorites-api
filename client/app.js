@@ -117,16 +117,18 @@ searchForm.addEventListener('submit', e => {
         
         // create search item
         const pokemonElement = document.createElement('div')
+        pokemonElement.classList.add('pokemon-element')
         
         // Load info and assign to element
-        const pokemonInfo = `${pokedexNum} ${name} ${typeNames}`
-        // Add Info to results
+        const pokemonInfo = `<h3>${pokedexNum}</h3> <h3>${name}</h3> <p>${typeNames}</p>`
         pokemonElement.innerHTML = pokemonInfo
+        // Add Info to results
         searchResults.appendChild(pokemonElement)
         
         // Setup favorite button
         const favoriteButton = document.createElement('button')
         favoriteButton.textContent = 'Add to Favorites'
+        favoriteButton.classList.add('fav-button')
         pokemonElement.appendChild(favoriteButton)
         // Functionality of Button
         favoriteButton.addEventListener('click', async () => {
@@ -162,17 +164,29 @@ const generateFavorite = (favorite) => {
     const commentInput = document.createElement('input')
     const button = document.createElement('input')
     
+    container.classList.add('favorite')
+    
+    // Create two containers
+    const topRow = document.createElement('div')
+    topRow.classList.add('top-row')
+    const bottomRow = document.createElement('div')
+    bottomRow.classList.add('bottom-row')
+    
+    // Add containers to main container
+    container.appendChild(topRow)
+    container.appendChild(bottomRow)
+    
     // Create name for pokemon
     nameEl.textContent = favorite.name
-    container.appendChild(nameEl)
+    topRow.appendChild(nameEl)
     
     // Create Comment
     commentEl.textContent = favorite.comment
-    container.appendChild(commentEl)
+    topRow.appendChild(commentEl)
     
     // Remove from favorites
     removeButton.textContent = 'Remove'
-    container.appendChild(removeButton)
+    topRow.appendChild(removeButton)
     removeButton.addEventListener('click', async () => {
         // Call Delete
         await deleteFavorite(favorite.name)
@@ -190,13 +204,15 @@ const generateFavorite = (favorite) => {
     
     // Comment input and submission setup
     commentInput.setAttribute('id', 'comment-input')
+    commentInput.classList.add('comment-input')
     button.setAttribute('id', 'comment-submit')
+    button.classList.add('comment-submit')
     button.setAttribute('type', 'submit')
     
     // Adding comment form to container
     commentForm.appendChild(commentInput)
     commentForm.appendChild(button)
-    container.appendChild(commentForm)
+    bottomRow.appendChild(commentForm)
     
     
     return container

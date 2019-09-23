@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: 'Helvetica Neue';
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 768px;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.search-form {
+    width: 640px;
+    margin: 16px auto;
+}
+
+.search-form > p {
+    margin: 24px 0;
+    font-weight: 500;
+}
+
+.searchText {
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: 4px 8px;
+    box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
+}
+
+.submit {
+    margin-left: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: white;
+}
+
+.submit:hover {
+    background-color: aqua;
+}
+
+.search-results {
+    width: 640px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.pokemon-element {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    width: 512px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.pokemon-element > h3 {
+    margin-right: 12px;
+}
+
+.pokemon-element > p {
+    margin-right: 12px;
+}
+.fav-button {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: white;
+}
+
+.fav-button:hover {
+    background-color: aqua;
+}
+
+.search-results > span {
+    
+}
+
+.favorites-container {
+    width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorite {
+    margin: 8px 0;
+    padding: 4px 8px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.top-row {
+    margin: 4px 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.top-row > h3 {
+    margin-right: 12px;
+}
+
+.top-row > p {
+    margin-right: 12px;
+}
+
+.top-row > button {
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: white;
+}
+
+.top-row > button:hover {
+    background-color: red;
+}
+
+.bottom-row {
+    margin-top: 8px;
+}
+
+.comment-input {
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-right: 8px;
+}
+
+.comment-submit {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: white;
+}
+
+.comment-submit:hover {
+    background-color: aqua;
+}
