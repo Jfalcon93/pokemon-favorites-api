@@ -1,5 +1,7 @@
 # Pokemon Favorites API
 
+Pokemon API built in Node JS.
+
 * Allows users to search Pokemon and select their favorites
 * Favorites can be added or deleted
 * Comments can be made on your favorite Pokemon and altered
